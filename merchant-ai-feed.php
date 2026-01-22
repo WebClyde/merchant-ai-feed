@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Merchant AI Feed
  * Plugin URI:  https://webclyde.com/plugins/merchant-ai-feed/
- * Description: Generates a WooCommerce product feed following the Agentic Commerce Protocol standard for OpenAI.
- * Version:     1.0.0
- * Author:      Trae AI
- * Author URI:  https://trae.ai
+ * Description: Generates a WooCommerce product feed following the Agentic Commerce Protocol standard for OpenAI and others.
+ * Version:     1.0.1
+ * Author:      WebClyde
+ * Author URI:  https://webclyde.com
  * License:     GPL-2.0+
  * Text Domain: merchant-ai-feed
  */
@@ -14,19 +14,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class Merchant_AI_Feed {
+class WebClyde_Merchant_AI_Feed {
 
 	/**
 	 * Instance of the class.
 	 *
-	 * @var Merchant_AI_Feed
+	 * @var WebClyde_Merchant_AI_Feed
 	 */
 	private static $instance = null;
 
 	/**
 	 * Get the instance of the class.
 	 *
-	 * @return Merchant_AI_Feed
+	 * @return WebClyde_Merchant_AI_Feed
 	 */
 	public static function get_instance() {
 		if ( null === self::$instance ) {
@@ -165,4 +165,4 @@ class Merchant_AI_Feed {
 }
 
 // Initialize the plugin
-Merchant_AI_Feed::get_instance();
+WebClyde_Merchant_AI_Feed::get_instance();

@@ -6,7 +6,7 @@ Donate link: https://webclyde.com/donate
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -103,5 +103,8 @@ No. The plugin is performance-optimized and uses batch processing.
 
 = 1.0.0 =
 * Initial release.
+
+= 1.0.1 =
+* Fix: plugin header urls out of service due to server SSL error.
 
 == Upgrade Notice ==
