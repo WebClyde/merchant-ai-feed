@@ -40,6 +40,15 @@ class WebClyde_Merchant_AI_Feed {
 	 */
 	public function __construct() {
 		add_action( 'rest_api_init', array( $this, 'register_routes' ) );
+		add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), [$this, 'plugin_action_links'] );
+	}
+
+	/**
+	 * Add plugin action links.
+	 */
+	public function plugin_action_links($actions){
+		$actions[] = '<a href="'. esc_url( get_rest_url( null, 'merchant-ai/v1/feed' ) ) .'" target="_blank">View AI Feed URL</a>';
+		return $actions;
 	}
 
 	/**
