@@ -107,4 +107,8 @@ No. The plugin is performance-optimized and uses batch processing.
 = 1.0.1 =
 * Fix: plugin header urls out of service due to server SSL error.
 
+= 1.1.0 =
+* add: plugin action url to view feed url
+* change: banner title case
+
 == Upgrade Notice ==
