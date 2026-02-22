@@ -111,4 +111,9 @@ No. The plugin is performance-optimized and uses batch processing.
 * add: plugin action url to view feed url
 * change: banner title case
 
+= 1.2.1 =
+* add: plugin dashboard page
+* add: plugin required header
+* change: dashboard original logo
+
 == Upgrade Notice ==

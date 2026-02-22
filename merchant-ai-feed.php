@@ -3,7 +3,7 @@
  * Plugin Name: Merchant AI Feed
  * Plugin URI:  https://webclyde.com/plugins/merchant-ai-feed/
  * Description: Generates a WooCommerce product feed following the Agentic Commerce Protocol standard for OpenAI and others.
- * Version:     1.1.0
+ * Version:     1.2.1
  * Author:      WebClyde
  * Author URI:  https://webclyde.com
  * License:     GPL-2.0+
@@ -22,7 +22,7 @@ class WebClyde_Merchant_AI_Feed {
 	/**
 	 * Plugin version.
 	 */
-	const VERSION = '1.1.0';
+	const VERSION = '1.2.1';
 
 	/**
 	 * Instance of the class.
