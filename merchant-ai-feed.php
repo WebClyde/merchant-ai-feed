@@ -7,7 +7,10 @@
  * Author:      WebClyde
  * Author URI:  https://webclyde.com
  * License:     GPL-2.0+
+ * Requires at least: 6.8
+ * Requires PHP: 7.4
  * Text Domain: merchant-ai-feed
+ * Requires Plugins:  woocommerce
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
