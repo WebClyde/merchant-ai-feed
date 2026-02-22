@@ -19,20 +19,7 @@ $pending = $total_products - $total_synced;
     
     <div class="merchant-ai-header">
         <div class="merchant-ai-header-left">
-            <svg class="merchant-ai-logo" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<!-- Improved Cart Logo matching the style in screenshot roughly -->
-                <path d="M12 20h42l-4.5 20h-30z" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M4 10h6l4 28" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="21" cy="48" r="3" fill="#D4AF37"/>
-                <circle cx="43" cy="48" r="3" fill="#D4AF37"/>
-                <path d="M22 30l8-12 6 6 12-14" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M48 10l8 0v8" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M56 10L42 24" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-				<path d="M50 36h10M50 44h8M50 28h8" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-				<circle cx="60" cy="36" r="2" stroke="#D4AF37" stroke-width="2"/>
-				<circle cx="58" cy="44" r="2" stroke="#D4AF37" stroke-width="2"/>
-				<circle cx="58" cy="28" r="2" stroke="#D4AF37" stroke-width="2"/>
-            </svg>
+            <img src="<?php echo esc_url( plugins_url( '../assets/images/icon-128x128.gif', __FILE__ ) ); ?>" alt="Merchant AI Feed">
             <h1>Merchant AI Feed</h1>
         </div>
         <div class="merchant-ai-header-right">
