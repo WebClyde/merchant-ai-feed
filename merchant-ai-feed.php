@@ -20,6 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WebClyde_Merchant_AI_Feed {
 
 	/**
+	 * Plugin version.
+	 */
+	const VERSION = '1.1.0';
+
+	/**
 	 * Instance of the class.
 	 *
 	 * @var WebClyde_Merchant_AI_Feed
@@ -44,6 +49,54 @@ class WebClyde_Merchant_AI_Feed {
 	public function __construct() {
 		add_action( 'rest_api_init', array( $this, 'register_routes' ) );
 		add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), [$this, 'plugin_action_links'] );
+		add_action( 'admin_menu', array( $this, 'register_admin_menu' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets' ) );
+		add_action( 'admin_init', array( $this, 'register_settings' ) );
+	}
+
+	/**
+	 * Register admin menu.
+	 */
+	public function register_admin_menu() {
+		add_menu_page(
+			'Merchant AI Feed',
+			'AI Feed',
+			'manage_options',
+			'merchant-ai-feed',
+			array( $this, 'render_admin_page' ),
+			'dashicons-chart-line',
+			58
+		);
+	}
+
+	/**
+	 * Enqueue admin scripts and styles.
+	 */
+	public function enqueue_admin_assets( $hook ) {
+		if ( 'toplevel_page_merchant-ai-feed' !== $hook ) {
+			return;
+		}
+
+		wp_enqueue_style( 'merchant-ai-admin-css', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), self::VERSION );
+	}
+
+	/**
+	 * Register plugin settings.
+	 */
+	public function register_settings() {
+		register_setting( 'merchant_ai_feed_settings', 'merchant_ai_active_status' );
+		register_setting( 'merchant_ai_feed_settings', 'merchant_ai_auto_sync_status' );
+	}
+
+	/**
+	 * Render the admin page.
+	 */
+	public function render_admin_page() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		require_once plugin_dir_path( __FILE__ ) . 'includes/admin-page.php';
 	}
 
 	/**
